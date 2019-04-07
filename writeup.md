@@ -120,13 +120,15 @@ _________________________________________________________________
 dense_2 (Dense)              (None, 84)                10164     
 _________________________________________________________________
 dense_3 (Dense)              (None, 1)                 85        
+_________________________________________________________________
+						Output
 =================================================================
 
 #### 3. Creation of the Training Set & Training Process
 
 To train my model I used dataset provided by Udacity. Some of the samples from original dataset are
 
-![alt text](/examples/left_center_right_orignal.jpg "Original Images")
+![alt text](/examples/left_center_right_orignal.png "Original Images")
 
 Converted to RGB :
 
@@ -140,17 +142,17 @@ First of all I divided data into 80% training data and 20% validation data.
 
 To remove redundant details I cropped image's 70px from top and 25px from bottom for all the images that is center camera images, left camera images and right camera images (right and left camera images are added by adding respective steering angle offset), images after cropping are :
 
-![alt text](/examples/Cropped_orignal.jpg " Cropped Original Images")
+![alt text](/examples/Cropped_orignal.png " Cropped Original Images")
 
-![alt text](/examples/Cropped_rgb.jpg " RGB Cropped Images")
+![alt text](/examples/Cropped_rgb.png " RGB Cropped Images")
 
 To augment the data set, I flipped center camera images to get model generalization and more input data. For example, here is an image that has then been flipped:
 
-![alt text](/examples/flipped.jpg " Flipped Cropped  Images")
+![alt text](/examples/flipped.png " Flipped Cropped  Images")
 
 After cropping image I applied normalization on images and these normalized images are passed to the network as input
 
-![alt text](/examples/Normalized.jpg " Normalized Cropped  Images")
+![alt text](/examples/Normalized.png " Normalized Cropped  Images")
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting.Augmenting data helped model to reduce overfitting and introduced additional data to generalize better . I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
@@ -158,4 +160,6 @@ I used this training data for training the model. The validation set helped dete
 
 | Track 1  |
 | ---- |
-| [Output Video](output-video.mp4) | 
+| [Output Video](./output_video.mp4) | 
+
+Thank you for reading !!!

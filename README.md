@@ -10,7 +10,7 @@ In this project, you will use what you've learned about deep neural networks and
 
 We have provided a simulator where you can steer a car around a track for data collection. You'll use image data and steering angles to train a neural network and then use this model to drive the car autonomously around the track.
 
-We also want you to create a detailed writeup of the project. Check out the [writeup template](https://github.com/udacity/CarND-Behavioral-Cloning-P3/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup. The writeup can be either a markdown file or a pdf document.
+We also want you to create a detailed writeup of the project. Check out the [writeup](https://github.com/udacity/CarND-Behavioral-Cloning-P3/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup. The writeup can be either a markdown file or a pdf document.
 
 To meet specifications, the project will require submitting five files: 
 * model.py (script used to create and train the model)
@@ -137,13 +137,15 @@ _________________________________________________________________
 dense_2 (Dense)              (None, 84)                10164     
 _________________________________________________________________
 dense_3 (Dense)              (None, 1)                 85        
+_________________________________________________________________
+						Output
 =================================================================
 
 #### 3. Creation of the Training Set & Training Process
 
 To train my model I used dataset provided by Udacity. Some of the samples from original dataset are
 
-![alt text](/examples/left_center_right_orignal.jpg "Original Images")
+![alt text](/examples/left_center_right_orignal.png "Original Images")
 
 Converted to RGB :
 
@@ -157,17 +159,17 @@ First of all I divided data into 80% training data and 20% validation data.
 
 To remove redundant details I cropped image's 70px from top and 25px from bottom for all the images that is center camera images, left camera images and right camera images (right and left camera images are added by adding respective steering angle offset), images after cropping are :
 
-![alt text](/examples/Cropped_orignal.jpg " Cropped Original Images")
+![alt text](/examples/Cropped_orignal.png " Cropped Original Images")
 
-![alt text](/examples/Cropped_rgb.jpg " RGB Cropped Images")
+![alt text](/examples/Cropped_rgb.png " RGB Cropped Images")
 
 To augment the data set, I flipped center camera images to get model generalization and more input data. For example, here is an image that has then been flipped:
 
-![alt text](/examples/flipped.jpg " Flipped Cropped  Images")
+![alt text](/examples/flipped.png " Flipped Cropped  Images")
 
 After cropping image I applied normalization on images and these normalized images are passed to the network as input
 
-![alt text](/examples/Normalized.jpg " Normalized Cropped  Images")
+![alt text](/examples/Normalized.png " Normalized Cropped  Images")
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting.Augmenting data helped model to reduce overfitting and introduced additional data to generalize better . I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
@@ -175,6 +177,6 @@ I used this training data for training the model. The validation set helped dete
 
 | Track 1  |
 | ---- |
-| [Output Video](./output-video.mp4) | 
+| [Output Video](./output_video.mp4) | 
 
 Thank you for reading !!!
