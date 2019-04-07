@@ -159,7 +159,7 @@ First of all I divided data into 80% training data and 20% validation data.
 
 To remove redundant details I cropped image's 70px from top and 25px from bottom for all the images that is center camera images, left camera images and right camera images (right and left camera images are added by adding respective steering angle offset), images after cropping are :
 
-![alt text](/examples/Cropped_orignal.png " Cropped Original Images")
+![alt text](/examples/Cropped_original.png " Cropped Original Images")
 
 ![alt text](/examples/Cropped_rgb.png " RGB Cropped Images")
 
