@@ -142,15 +142,23 @@ First of all I divided data into 80% training data and 20% validation data.
 
 To remove redundant details I cropped image's 70px from top and 25px from bottom for all the images that is center camera images, left camera images and right camera images (right and left camera images are added by adding respective steering angle offset), images after cropping are :
 
+Cropped Original Images:
+
 ![alt text](/examples/Cropped_original.png " Cropped Original Images")
+
+RGB Cropped Images:
 
 ![alt text](/examples/Cropped_rgb.png " RGB Cropped Images")
 
 To augment the data set, I flipped center camera images to get model generalization and more input data. For example, here is an image that has then been flipped:
 
+Flipped Cropped Images:
+
 ![alt text](/examples/flipped.png " Flipped Cropped  Images")
 
 After cropping image I applied normalization on images and these normalized images are passed to the network as input
+
+Normalized Cropped  Images:
 
 ![alt text](/examples/Normalized.png " Normalized Cropped  Images")
 
